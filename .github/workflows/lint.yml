@@ -16,6 +16,12 @@ jobs:
       - name: clone/checkout the code
         uses: actions/checkout@v7
 
+      # setup python/install python
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
       # this step will install linter
       - name: install linter
         run: pip install ruff
